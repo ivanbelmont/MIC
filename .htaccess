@@ -1,0 +1,58 @@
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz|html|svg|ttf|woff|woff2|map)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+php_flag display_startup_errors off
+php_flag display_errors off
+php_flag html_errors off
+php_value docref_root 0
+php_value docref_ext 0
+
+# secure htaccess file
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+# disable directory browsing
+Options All -Indexes
+
+
+ErrorDocument 403 http://mic-agentes.com/errores/403.php
+ErrorDocument 404 http://mic-agentes.com/errores/404.php
+ErrorDocument 500 http://mic-agentes.com/errores/500.php
+
+
+Options +FollowSymlinks
+
+RewriteEngine on 
+
+#refer home
+RewriteRule ^inicio$ contenido.php?g=$1 [NC,L]
+RewriteRule ^inicio$ contenido.php?g=$1 [NC,L]
+
+RewriteRule ^inicio/([a-zA-Z0-9_-]+)$ contenido.php?g=$1 [NC,L]
+RewriteRule ^inicio/([a-zA-Z0-9_-]+)/$ contenido.php?g=$1 [NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+RewriteRule ^(.*)$ $1.php
