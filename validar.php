@@ -15,7 +15,7 @@
 
   //echo "Id=".$valida[0]."<br>";
   //echo "Validador=".$valida[1]."<br>";
-
+hola
 
    if($valida[1]!=0){
 
