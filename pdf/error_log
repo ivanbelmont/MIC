@@ -1,0 +1,96 @@
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  file_get_contents(http://www.mic-agentes.com//pdf/polizas/Poliza 040970642178000000.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:15:02 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  file_get_contents(http://www.mic-agentes.com//pdf/polizas/Qualitas.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[11-Sep-2018 00:18:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  file_get_contents(http://mic-agentes.com//pdf/polizas/poliza1.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 20:51:36 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  file_get_contents(http://mic-agentes.com//pdf/polizas/poliza.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:25:07 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  file_get_contents(http://mic-agentes.com//pdf/polizas/poliza.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  file_get_contents(http://mic-agentes.com//pdf/polizas/poliza.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[14-Sep-2018 21:33:06 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  file_get_contents(http://www.mic-agentes.com//pdf/polizas/Qualitas.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[15-Sep-2018 23:23:39 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  file_get_contents(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  file_get_contents(http://mic-agentes.com//pdf/polizas/Poliza_040970642178000000.pdf): failed to open stream: no suitable wrapper could be found in /home/micagent/public_html/modulos/PdfParser.php on line 25
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  strpos(): Offset not contained in string in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 69
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43
+[19-Sep-2018 19:11:45 America/Chicago] PHP Warning:  explode(): Empty delimiter in /home/micagent/public_html/pdf/obtenerpolizadesglosada.php on line 43

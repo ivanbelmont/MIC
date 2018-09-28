@@ -1,0 +1,15 @@
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?wsabstract.com/.*$ [NC]
+#RewriteCond %{HTTP_REFERER} !^http://(www\.)?javascriptkit.com/.*$ [NC]
+#RewriteRule \.(js|gif|jpg)$ - [F]
+
+#http://localhost:8080/Mics/inicio/Nuevo_Usuario#
+
+
+#<IfModule mod_rewrite.c>
+ # RewriteEngine on
+  #RewriteCond %{HTTP_REFERER} !^$
+  #RewriteCond %{HTTP_REFERER} !^http://mic-agentes.com/.*$ [NC]
+  #RewriteRule \.(js)$ http://davidwalsh.name/hotlink.js [R,L]
+#</IfModule
