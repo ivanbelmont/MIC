@@ -36,9 +36,9 @@ php_value docref_ext 0
 Options All -Indexes
 
 
-ErrorDocument 403 http://mic-agentes.com/errores/403.php
-ErrorDocument 404 http://mic-agentes.com/errores/404.php
-ErrorDocument 500 http://mic-agentes.com/errores/500.php
+ErrorDocument 403 MicGit/errores/403.php
+ErrorDocument 404 MicGit/errores/404.php
+ErrorDocument 500 MicGit/errores/500.php
 
 
 Options +FollowSymlinks

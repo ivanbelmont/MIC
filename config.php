@@ -4,13 +4,13 @@
 
 //$puerto = $_SERVER['HTTPS'] ? 'https://' : 'http://';
 $puerto = 'http://';
-define( 'BASE_PATH', $puerto .  $_SERVER['SERVER_NAME'] .'/');//Ruta base donde se encuentra la carpeta
-$CONF = $_SERVER['SERVER_NAME'].'/';
+define( 'BASE_PATH', $puerto .  $_SERVER['SERVER_NAME'] .'/MicGit');//Ruta base donde se encuentra la carpeta
+$CONF = $_SERVER['SERVER_NAME'].'/MicGit';
 
 define( 'DB_HOST', 'localhost' );//Servidor de la base de datos
 define( 'DB_USERNAME', 'micagent_user');//Usuario de la base de datos
 define( 'DB_PASSWORD', 'rNQTWEKsSJeHu24d');//Contraseña de la base de datos
-define( 'DB_NAME', 'micagent_mic');//Nombre de la base de datos
+define( 'DB_NAME', 'mic');//Nombre de la base de datos
 define('BASE_PATH_ASSETS', $puerto.$CONF.'/assets/');
 define('BASE_PATH_POLIZAS', $puerto.$CONF.'/pdf/polizas/');
 

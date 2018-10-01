@@ -53,9 +53,6 @@ Dropzone.options.myDropzone = {
    maxFiles: 2,
 
 
-
-
-
   init: function() {
 
 
