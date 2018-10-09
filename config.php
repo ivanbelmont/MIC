@@ -1,35 +1,20 @@
 <?php
-//error_reporting(0);
+
+$folder="/"; //Production folder
+$folder="/MicGit/"; //My folder
+$protocol = 'http://';
+$server=$_SERVER['SERVER_NAME'];
+$myroute=$protocol .  $_SERVER['SERVER_NAME'].$folder;
 
 
-//$puerto = $_SERVER['HTTPS'] ? 'https://' : 'http://';
-$puerto = 'http://';
-define( 'BASE_PATH', $puerto .  $_SERVER['SERVER_NAME'] .'/MicGit');//Ruta base donde se encuentra la carpeta
-$CONF = $_SERVER['SERVER_NAME'].'/MicGit';
+define('ROUTE', $myroute);
+define('ASSETS', $myroute."assets/");
+define('ASSETS_GLOBAL', $myroute."global_assets/");
+define('POLICY_FILE', $myroute.'pdf/polizas/');
 
-define( 'DB_HOST', 'localhost' );//Servidor de la base de datos
-define( 'DB_USERNAME', 'micagent_user');//Usuario de la base de datos
-define( 'DB_PASSWORD', 'rNQTWEKsSJeHu24d');//Contraseña de la base de datos
-define( 'DB_NAME', 'mic');//Nombre de la base de datos
-define('BASE_PATH_ASSETS', $puerto.$CONF.'/assets/');
-define('BASE_PATH_POLIZAS', $puerto.$CONF.'/pdf/polizas/');
+define( 'DB_HOST', 'localhost' );
+define( 'DB_USERNAME', 'micagent_user');
+define( 'DB_PASSWORD', 'rNQTWEKsSJeHu24d');
+define( 'DB_NAME', 'mic');
 
-
-include 'funciones/DBclass.php';//CONEXIONES DEL SISTEMA
-include 'funciones/GeneralClass.php';//DIVBERSAS FUNCIONES DEL SISTEMA
-include 'funciones/ObtenerDatos.php';//PARA OBTENER TODO TIPO DE DATOS
-include 'funciones/InsertarDatos.php';//PARA INSERTAR TODO TIPO DE DATOS
-include 'funciones/ActualizaDatos.php';//PARA ACTUALIZAR TODO TIPO DE DATOS
-
-
-
-
-
-//FUNCION QUE BUSCA EN TODO EL DIRECTORIO DE NUESTRA CARPETA LOS ARCHIVOS DE LAS CLASES 
-/*function __autoload($class)
-{
-	$parts = explode('_', $class);
-	$path = implode(DIRECTORY_SEPARATOR,$parts);
-	require_once  $path . '.php';
-}*/
 ?>

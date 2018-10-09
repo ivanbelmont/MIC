@@ -15,6 +15,7 @@ ExpiresDefault "access 1 month"
 </IfModule>
 ## EXPIRES CACHING ##
 
+
 <IfModule mod_headers.c>
   <FilesMatch "\.(js|css|xml|gz|html|svg|ttf|woff|woff2|map)$">
     Header append Vary: Accept-Encoding
@@ -36,9 +37,9 @@ php_value docref_ext 0
 Options All -Indexes
 
 
-ErrorDocument 403 MicGit/errores/403.php
-ErrorDocument 404 MicGit/errores/404.php
-ErrorDocument 500 MicGit/errores/500.php
+ErrorDocument 403 http://localhost/MicGit/error/403.php
+ErrorDocument 404 http://localhost/MicGit/error/404.php
+ErrorDocument 500 http://localhost/MicGit/error/500.php
 
 
 Options +FollowSymlinks
@@ -46,11 +47,11 @@ Options +FollowSymlinks
 RewriteEngine on 
 
 #refer home
-RewriteRule ^inicio$ contenido.php?g=$1 [NC,L]
-RewriteRule ^inicio$ contenido.php?g=$1 [NC,L]
+RewriteRule ^init$ content.php?g=$1 [NC,L]
+RewriteRule ^init$ content.php?g=$1 [NC,L]
 
-RewriteRule ^inicio/([a-zA-Z0-9_-]+)$ contenido.php?g=$1 [NC,L]
-RewriteRule ^inicio/([a-zA-Z0-9_-]+)/$ contenido.php?g=$1 [NC,L]
+RewriteRule ^init/([a-zA-Z0-9_-]+)$ content.php?g=$1 [NC,L]
+RewriteRule ^init/([a-zA-Z0-9_-]+)/$ content.php?g=$1 [NC,L]
 
 
 RewriteCond %{REQUEST_FILENAME} !-d 
