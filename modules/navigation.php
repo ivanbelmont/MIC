@@ -13,13 +13,18 @@
 						<div class="card-body">
 							<div class="media">
 								<div class="mr-3">
-									<a href="#"><img src="<?php echo ASSETS_GLOBAL; ?>images/placeholders/placeholder.jpg" width="38" height="38" class="rounded-circle" alt=""></a>
+									<a href="#"><img src="<?php echo ASSETS.'images/users/'.$_SESSION["imagen"]; ?>" width="38" height="38" class="rounded-circle" alt=""></a>
 								</div>
-
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
+    $("#usconutry").html("&nbsp;"+data.address.country);
+});
+</script>
 								<div class="media-body">
-									<div class="media-title font-weight-semibold">Victoria Baker</div>
+									<div class="media-title font-weight-semibold"><?php echo $_SESSION["nombre"]." ".$_SESSION["app"]; ?></div>
 									<div class="font-size-xs opacity-50">
-										<i class="icon-pin font-size-sm"></i> &nbsp;Santa Ana, CA
+										<i id="usconutry" class="icon-pin font-size-sm"></i>
 									</div>
 								</div>
 
@@ -35,7 +40,7 @@
 					<!-- Main navigation -->
 					<div class="card-body p-0">
 						<ul class="nav nav-sidebar" data-nav-type="accordion">
-							
+
 					<?php
 					$modulosr=funs_getDatos::ObtenerModulos();
 					$dato='icono';

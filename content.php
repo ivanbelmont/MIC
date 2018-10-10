@@ -54,7 +54,14 @@ if(isset($_SESSION["id_int"])){
 		<div class="content-wrapper">
 				<!-- Content area -->
 			<div class="content">
-				Work Area
+			<?php
+
+							//DENTRO DE CADA PHP, VAN SUS FUNCIONES ADEMAS DE LOS CSS DE DICHA SECCION
+							$modulo = funs_getDatos::ObtenerModuloUnico(strtolower($g));
+							include "modules/".$modulo.".php";
+			//TRAES TODAS LOS MODULOS CON CONSULTA A BASE
+
+			?>
 			</div>
 		</div>
 		<!-- /main content -->

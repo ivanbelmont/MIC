@@ -266,8 +266,8 @@
 
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
-						<img src="<?php echo ASSETS_GLOBAL; ?>images/placeholders/placeholder.jpg" class="rounded-circle" alt="">
-						<span>Victoria</span>
+						<img src="<?php echo ASSETS.'images/users/'.$_SESSION["imagen"]; ?>" width="38" height="38" class="rounded-circle" alt="">
+						<span><?php echo $_SESSION["nombre"]." ".$_SESSION["app"]; ?></span>
 					</a>
 
 					<div class="dropdown-menu dropdown-menu-right">
