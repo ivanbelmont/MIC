@@ -37,7 +37,7 @@ error_reporting(E_ALL);
     $_SESSION["nombre"]=funs_getDatos::ObtenerCampo("nombre");
     $_SESSION["app"]=funs_getDatos::ObtenerCampo("app");
 
-   	header("location: inicio/inicio");
+   	header("location: init/home");
 
 
    }

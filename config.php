@@ -17,4 +17,7 @@ define( 'DB_USERNAME', 'micagent_user');
 define( 'DB_PASSWORD', 'rNQTWEKsSJeHu24d');
 define( 'DB_NAME', 'mic');
 
+include 'functions/DBclass.php';//SISTEM CONECTIONS
+include 'functions/functionsClass.php';//FUNCTIONS CONECTIONS
+
 ?>
