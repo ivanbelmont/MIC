@@ -700,7 +700,7 @@ class ActualizaDatos
 {
 
 
-     public function ActualizaUsuario($id)
+     public static function ActualizaUsuario($id)
      {
      //ANTES DE ACTUALIZAR, VER SI SE TIENE LOS PERMISOS DE SUPER ADMIN
      	//UN SUPER ADMIN, NO SE PUEDE PONER EN SUSPENCION 
@@ -732,7 +732,7 @@ class ActualizaDatos
 
      }
 
-public function AcessosCliente($id,$id_user,$id_rol)
+public static function AcessosCliente($id,$id_user,$id_rol)
      {
 		$mysqli = funs_DBclass::getConexion();
 
@@ -763,7 +763,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 
 
 
-      public function EliminaUsuario($id)
+      public static function EliminaUsuario($id)
      {
      //ANTES DE ACTUALIZAR, VER SI SE TIENE LOS PERMISOS DE SUPER ADMIN
      	//UN SUPER ADMIN, NO SE PUEDE PONER EN SUSPENCION 
@@ -785,7 +785,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 
      }
 
-     public function EditaCampo($campo,$id,$tabla,$dato,$camposerial=false)
+     public static function EditaCampo($campo,$id,$tabla,$dato,$camposerial=false)
      {
 
      	//VALIDAR TOKEN
@@ -822,7 +822,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 
 
 
-      public function ActualizaDatosPro($val,$user,$id_int,$tabla)
+      public static function ActualizaDatosPro($val,$user,$id_int,$tabla)
      {
      	//COMPROBAR SI YA ESXISTE
      	//COMPROBAR PAQUETE O PLAN
@@ -848,7 +848,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
 
 
-     public function EliminaCliente($id,$id_user,$id_rol)
+     public static function EliminaCliente($id,$id_user,$id_rol)
      {
 
 		$mysqli = funs_DBclass::getConexion();
@@ -878,7 +878,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 {
 
 
-     public function InsertaUsuarios($val,$user,$pass)
+     public static function InsertaUsuarios($val,$user,$pass)
      {
      	//COMPROBAR SI YA ESXISTE
      	//COMPROBAR PAQUETE O PLAN
@@ -903,7 +903,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
 
 
-     public function InsertaClientes($val,$id_interno,$id_user)
+     public static function InsertaClientes($val,$id_interno,$id_user)
      {
 
 		$mysqli = funs_DBclass::getConexion();
@@ -924,7 +924,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 
      }
 
-     public function InsertaPoliza($poliza,$inf_asegurado,$desc_seguro,$robo,$resp_civil,$gastos_ocupantes,$gatos_legales,$asistencia,$muerte,$materiales,$adicionales,$id_cliente)
+     public static function InsertaPoliza($poliza,$inf_asegurado,$desc_seguro,$robo,$resp_civil,$gastos_ocupantes,$gatos_legales,$asistencia,$muerte,$materiales,$adicionales,$id_cliente)
      {
 
 		$mysqli = funs_DBclass::getConexion();
@@ -980,7 +980,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 	 */
 	public $_con;
 
-     public function obtenerUsuarios()
+     public static function obtenerUsuarios()
      {
 
 		 $mysqli = funs_DBclass::getConexion();
@@ -996,7 +996,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-          public function obtenerDatoUnico($id,$tabla)
+          public static function obtenerDatoUnico($id,$tabla)
      {
 
 		$mysqli = funs_DBclass::getConexion();
@@ -1008,7 +1008,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
 
      ////////////// END FUNCTION //////////////////////
 
-       public function obtenerPolizas($id,$tabla)
+       public static function obtenerPolizas($id,$tabla)
      {
 
         $mysqli = funs_DBclass::getConexion();
@@ -1052,7 +1052,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      ////////////// END FUNCTION //////////////////////
 
 
-      public function ObtenerModulos()
+      public static function ObtenerModulos()
      {
 
 		$mysqli = funs_DBclass::getConexion();
@@ -1065,7 +1065,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      ////////////// END FUNCTION //////////////////////
 
 
-      public function ObtenerModuloUnico($nombre)
+      public static function ObtenerModuloUnico($nombre)
      {
 
 		$mysqli = funs_DBclass::getConexion();
@@ -1108,7 +1108,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-      public function ObtenerCampo($campo)
+      public static function ObtenerCampo($campo)
      {
 
      	$datos=$_SESSION["datos"];
@@ -1125,7 +1125,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-      public function ObtenerCampoBase($datos,$campo)
+      public static function ObtenerCampoBase($datos,$campo)
      {
 
      	$datos=mic_funciones::desencriptar($datos);
@@ -1147,7 +1147,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-      public function ObtenerCampoSimple($dato)
+      public static function ObtenerCampoSimple($dato)
      {
      	//CONVERTIMOS DATO A ENTERO PARA EVITAR SQL INYECCION
 		$mysqli = funs_DBclass::getConexion();
@@ -1164,7 +1164,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-      public function obtenerArrayDatos($datos)
+      public static function obtenerArrayDatos($datos)
      {
 
      	
@@ -1180,7 +1180,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-      public function obtenerClientes()
+      public static function obtenerClientes()
      {
      	$id_user=$_SESSION["id_intV"];
      	$id_rol=$_SESSION["id_rol"];
@@ -1205,7 +1205,7 @@ public function AcessosCliente($id,$id_user,$id_rol)
      }
      ////////////// END FUNCTION //////////////////////
 
-      public function obtenerPermisos()
+      public static function obtenerPermisos()
      {
         $mysqli = funs_DBclass::getConexion();
         
@@ -1222,7 +1222,7 @@ ORDER BY p.`permiso_id`") or die (mysqli_error($mysqli));
      }
      ////////////// END FUNCTION //////////////////////
 
-           public function obtenerNomPermisos($permiso)
+           public static function obtenerNomPermisos($permiso)
      {
         switch ($permiso) {
             case 'M':
