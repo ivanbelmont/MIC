@@ -15,7 +15,6 @@
 								<div class="mr-3">
 									<a href="#"><img src="<?php echo ASSETS.'images/users/'.$_SESSION["imagen"]; ?>" width="38" height="38" class="rounded-circle" alt=""></a>
 								</div>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
 $.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
     $("#usconutry").html("&nbsp;"+data.address.country);
@@ -62,7 +61,7 @@ $.getJSON('http://api.wipmania.com/jsonp?callback=?', function (data) {
 						$estilo="opacity:0.5;";
 					}
 
-					echo '<li style="'.$estilo.'" class="nav-item"><a href="'.$fila->mostrar.'" class="nav-link"><i class="'.$fila->icon.'"></i> <span>'.ucfirst($fila->mostrar).'</span></a></li>';
+echo '<li style="'.$estilo.'" class="nav-item"><a title="'.ucfirst($fila->mostrar).'" href="'.$fila->mostrar.'" class="nav-link"><i class="'.$fila->icon.'"></i> <span>'.ucfirst($fila->mostrar).'</span></a></li>';
 
 					}//END WHILE
 

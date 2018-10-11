@@ -49,16 +49,58 @@
 			</button>
 			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
 				<i class="icon-paragraph-justify3"></i>
-			</button>
+			</button><!-- Ivan -->
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbar-mobile">
 			<ul class="navbar-nav">
-				<li class="nav-item">
+				<li id="NavButton" class="nav-item">
 					<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
 						<i class="icon-paragraph-justify3"></i>
 					</a>
 				</li>
+
+				<script type="text/javascript">
+
+$( document ).ready(function() {
+
+
+	if(localStorage.getItem("MenuPref"))
+    {
+    	$('body').addClass('sidebar-xs');
+    }
+    else { $('body').removeClass('sidebar-xs'); }
+
+
+$( "#NavButton" ).click(function() {
+
+   if (typeof(Storage) !== "undefined") {
+    console.log("LocalStorage disponible");
+
+    if(localStorage.getItem("MenuPref"))
+    {
+
+	localStorage.removeItem("MenuPref");
+
+
+    }
+    else{
+    	    localStorage.setItem("MenuPref", "Minus");
+    }
+
+
+    
+} else {
+    console.log("LocalStorage no soportado en este navegador");
+}
+
+	});
+
+});
+
+
+
+				</script>
 
 				<li class="nav-item dropdown">
 					<a href="#" class="navbar-nav-link dropdown-toggle caret-0" data-toggle="dropdown">

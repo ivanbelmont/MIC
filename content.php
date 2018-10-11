@@ -14,7 +14,7 @@ if(isset($_SESSION["id_int"])){
 	mic_funciones::Sesiones($s);
 ?>
 
-<body>
+<body id="body">
 
 	<!-- Page content -->
 	<div class="page-content pt-0">
