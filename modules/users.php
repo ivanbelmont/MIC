@@ -28,13 +28,13 @@ $usuarios=funs_getDatos::obtenerUsuarios();
 					<table class="table datatable-responsive-control-right">
 						<thead>
 							<tr>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Job Title</th>
-								<th>DOB</th>
-								<th>Status</th>
-								<th>Status2</th>
-								<th class="text-center">Actions</th>
+								<th>Nombre</th>
+								<th>Tipo</th>
+								<th>Telefono</th>
+								<th>Celular</th>
+								<th>Correo</th>
+								<th>Estado</th>
+								<th class="text-center">Acciones</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -44,13 +44,14 @@ $usuarios=funs_getDatos::obtenerUsuarios();
 
 while ($fila = $usuarios->fetch_object()) 
           {
+          	$nombre=funs_getDatos::ObtenerCampoBase($fila->datos,'nombre')." ".funs_getDatos::ObtenerCampoBase($fila->datos,'app')." ".funs_getDatos::ObtenerCampoBase($fila->datos,'apm');
           	echo '<tr>
-								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'nombre').'</td>
-								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'app').' '.funs_getDatos::ObtenerCampoBase($fila->datos,'apm').'</td>
+								<td>'.$nombre.'</td>
+								<td><span class="badge '.funs_getDatos::ObtenerRol($fila->id_rol,'color').'">'.funs_getDatos::ObtenerRol($fila->id_rol,'nom').'</span></td>
 								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'tel').'</td>
+								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'celular').'</td>
 								<td>'.$fila->usuario.'</td>
-								<td>'.$fila->usuario.'</td>
-								<td><span class="badge badge-success">Active</span></td>
+								<td><span class="badge badge-success">'.$fila->estatus.'</span></td>
 								<td class="text-center">
 									<div class="list-icons">
 										<div class="dropdown">

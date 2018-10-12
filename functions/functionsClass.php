@@ -1243,6 +1243,35 @@ ORDER BY p.`permiso_id`") or die (mysqli_error($mysqli));
      }
      ////////////// END FUNCTION //////////////////////
 
+     public static function ObtenerRol($id_rol,$complement=false)
+     {
+		 $mysqli = funs_DBclass::getConexion();
+     	
+		$result =$mysqli->query("SELECT descripcion,color FROM mic_rols WHERE id=".$id_rol) or die (mysqli_error($mysqli));
+		$result->data_seek(0);
+        $fila = $result->fetch_object();
+
+        switch ($complement) {
+        	case 'nom':
+        		$result=$fila->descripcion;
+        		break;
+        	case 'color':
+        		$result=$fila->color;
+        			break;
+        	
+        	default:
+        	$result=$fila->descripcion;
+        		break;
+        }
+        
+
+
+
+
+			return $result;
+     }
+     ////////////// END FUNCTION //////////////////////
+
 
  }//END CLASS
 ?>
