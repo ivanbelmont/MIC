@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+	<title>Mic | <?=ucfirst($g); ?></title>
 
 	<!-- Global stylesheets -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -29,12 +29,10 @@
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/bootstrap_multiselect.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/ui/moment/moment.min.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/pickers/daterangepicker.js"></script>
-
-	<script src="<?php echo ASSETS; ?>js/app.js"></script>
-	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/dashboard.js"></script>
-	<!-- /theme JS files -->
-
-</head>
+					<?php
+					mic_system::LoadElements($modulo);
+					?>
+	</head>
 	<!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark">
 		<div class="navbar-brand wmin-200">

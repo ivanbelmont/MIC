@@ -1,8 +1,11 @@
 <?php
 session_start();
 include ("config.php");
-include ("modules/header.php");
+
+
 $g=$_GET['g'];
+$modulo = funs_getDatos::ObtenerModuloUnico(strtolower($g));
+include ("modules/header.php");
 
 if(isset($_SESSION["id_int"])){
 			$s=1;
@@ -57,7 +60,6 @@ if(isset($_SESSION["id_int"])){
 			<?php
 
 							//DENTRO DE CADA PHP, VAN SUS FUNCIONES ADEMAS DE LOS CSS DE DICHA SECCION
-							$modulo = funs_getDatos::ObtenerModuloUnico(strtolower($g));
 							include "modules/".$modulo.".php";
 			//TRAES TODAS LOS MODULOS CON CONSULTA A BASE
 

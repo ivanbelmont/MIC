@@ -1,13 +1,9 @@
 <?php
 $usuarios=funs_getDatos::obtenerUsuarios();
 ?>
-	<!-- Theme JS files -->
-	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/datatables.min.js"></script>
-	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/extensions/responsive.min.js"></script>
-	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/select2.min.js"></script>
 
-	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/datatables_responsive.js"></script>
-	<!-- /theme JS files -->
+
+
 		<!-- Control position -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
@@ -51,7 +47,12 @@ while ($fila = $usuarios->fetch_object())
 								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'tel').'</td>
 								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'celular').'</td>
 								<td>'.$fila->usuario.'</td>
-								<td><span class="badge badge-success">'.$fila->estatus.'</span></td>
+								<td>
+								<div class="form-check form-check-switch form-check-switch-left">
+												<label class="form-check-label d-flex align-items-center">
+													<input type="checkbox" class="form-check-input form-check-input-switch" data-on-text="On" data-off-text="Off" data-on-color="success" data-off-color="default" checked>
+												</label>
+											</div><span class="badge badge-success">'.$fila->estatus.'</span></td>
 								<td class="text-center">
 									<div class="list-icons">
 										<div class="dropdown">
