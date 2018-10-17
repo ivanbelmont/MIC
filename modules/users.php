@@ -35,7 +35,6 @@ $usuarios=funs_getDatos::obtenerUsuarios();
 							</tr>
 						</thead>
 						<tbody>
-
 							<?php
 
 while ($fila = $usuarios->fetch_object()) 
