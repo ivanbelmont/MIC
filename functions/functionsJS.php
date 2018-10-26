@@ -6,7 +6,7 @@ base_path=server+'process/process.php';
 var method='post';
 var parametros;
 var mensajeParam;
-//alert(base_path);
+alert(base_path);
 Vprocess="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09";
 valor="test";
 
