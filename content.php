@@ -42,7 +42,7 @@ if(isset($_SESSION["id_int"])){
 			<!-- Sidebar content -->
 			<div class="sidebar-content">
 				<div class="card card-sidebar-mobile">
-
+					<div id="messages"></div>
 					<?php  include ("modules/navigation.php"); ?>
 
 				</div>
@@ -73,6 +73,7 @@ if(isset($_SESSION["id_int"])){
 
 <?php
 include ("modules/footer.php");
+include ("functions/functionsJS.php");
 ?>	
 </body>
 </html>

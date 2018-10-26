@@ -217,27 +217,51 @@ class mic_system
 
 	public static function LoadElements($module) {
 		$serieJs=mic_funciones::aleatorio(8);
-		
+
 		switch ($module) {
 			case 'users':
 				?>
-				<!-- Theme JS files -->
-<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/uniform.min.js?u=<?=$serieJs; ?>"></script>
-<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/switchery.min.js?u=<?=$serieJs; ?>"></script>
-<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/switch.min.js?u=<?=$serieJs; ?>"></script>
-<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/datatables.min.js?u=<?=$serieJs; ?>"></script>
-<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/extensions/responsive.min.js?u=<?=$serieJs; ?>"></script>
-<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/select2.min.js?u=<?=$serieJs; ?>"></script>
+	<!-- JS TABLES -->
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/select2.min.js"></script>
 
-<script src="<?php echo ASSETS; ?>js/app.js?u=<?=$serieJs; ?>"></script>
+	<!-- JS BUTTONS -->
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/extensions/jquery_ui/interactions.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/select2.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/inputs/touchspin.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/uploaders/fileinput/plugins/purify.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/uploaders/fileinput/plugins/sortable.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/uploaders/fileinput/fileinput.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/extensions/contextmenu.js"></script>
 
-<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/form_checkboxes_radios.js?u=<?=$serieJs; ?>"></script>
-<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/datatables_responsive.js?u=<?=$serieJs; ?>"></script>
+	<!-- JS NOTIFICATIONS -->
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/notifications/jgrowl.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/notifications/noty.min.js"></script>
+
+    <!-- JS GENERAL -->
+	<script src="<?php echo ASSETS; ?>js/app.js"></script>
+
+	
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/datatables_responsive.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/table_elements.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/extra_jgrowl_noty.js"></script>
+
 				<?php
 				break;
+
+				default:
+					?>
+<script src="<?php echo ASSETS; ?>js/app.js?u=<?=$serieJs; ?>"></script>
+
+					<?php
+					break;
 			
 		}//END SWITCH
-?><script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/dashboard.js?u=<?=$serieJs; ?>"></script>
+?>
 <?php
 	}
 ////////////////////////////////// END function /////////////////////////////
@@ -336,9 +360,8 @@ class ActualizaDatos
 
 		
 		}
-		echo $query;
-
-		echo "<br>afectadas=".$afectadas;
+		//echo $query;
+		//echo "<br>afectadas=".$afectadas;
 
 		return mysqli_affected_rows($mysqli);
 //COMPROBAR SI FUE EXITOSA

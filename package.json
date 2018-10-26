@@ -1,0 +1,32 @@
+{
+  "name": "micgit",
+  "version": "1.0.0",
+  "description": "Sistema de Agentes",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanbelmont/MIC.git"
+  },
+  "author": "Vallerius Ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivanbelmont/MIC/issues"
+  },
+  "homepage": "https://github.com/ivanbelmont/MIC#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.3.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rtlcss": "^1.3.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "jshint": "^2.9.6"
+  }
+}

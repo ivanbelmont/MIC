@@ -30,6 +30,7 @@
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/ui/moment/moment.min.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/pickers/daterangepicker.js"></script>
 					<?php
+					//echo $modulo;
 					mic_system::LoadElements($modulo);
 					?>
 	</head>
@@ -92,9 +93,11 @@ $( "#NavButton" ).click(function() {
     console.log("LocalStorage no soportado en este navegador");
 }
 
-	});
+	});//END CLICK
 
-});
+});//END READY
+
+
 
 
 
