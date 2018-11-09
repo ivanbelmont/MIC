@@ -6,7 +6,7 @@ base_path=server+'process/process.php';
 var method='post';
 var parametros;
 var mensajeParam;
-alert(base_path);
+//alert(base_path);
 Vprocess="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09";
 valor="test";
 
@@ -71,7 +71,80 @@ switch ($modulo) {
 
 			}//END function
 
+			/*var BtnSwitch=$(".badge");
+			BtnSwitch.click(function(){
 
+				alert(this.id);
+				alert($("#"+this.id).attr('name'));
+				//alert(this.id.text());
+				//alert(this.attr('name'));
+			 });
+
+			$('.BtnSwitch').each(function (){
+			alert($(this).attr('name'));
+			});
+*/
+			/*jQuery.switchBtnAdd = function(param)
+			{
+				console.log(param);
+		    }//END function*/
+			//var BtnSwitch=$("div.datatable-footer").find('a.paginate_button');
+
+
+/*			BtnSwitch.click(function(){
+        $("div.BtnSwitch").each(function(){
+            //alert($(this).text())
+            this.append('<input name="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09" id="1" type="checkbox" >');
+        });
+    });*/
+
+			//BtnSwitch.trigger('click');
+var toolsX='';
+
+			var dataSetXXX = [
+            ['Trident','Internet Explorer 4.0','Win 95+','4','X','HIS',toolsX],
+            ['Trident','Internet Explorer 5.0','Win 95+','5','C','HIS',toolsX],
+            ['Trident','Internet Explorer 5.5','Win 95+','5.5','A','HIS',toolsX],
+            ['Trident','Internet Explorer 6','Win 98+','6','A','HIS',toolsX],
+            ['Gecko','Firefox 1.0','Win 98+ / OSX.2+','1.7','A','HIS',toolsX],
+            ['Gecko','Firefox 1.5','Win 98+ / OSX.2+','1.8','A','HIS',toolsX],
+            ['Gecko','Firefox 2.0','Win 98+ / OSX.2+','1.8','A','HIS',toolsX],
+            ['Gecko','Firefox 3.0','Win 2k+ / OSX.3+','1.9','A','HIS',toolsX],
+            ['Gecko','Camino 1.0','OSX.2+','1.8','A','HIS',toolsX],
+            ['Gecko','Camino 1.5','OSX.3+','1.8','A','HIS',toolsX],
+            ['Webkit','Safari 1.2','OSX.3','125.5','A','HIS',toolsX],
+            ['Webkit','Safari 1.3','OSX.3','312.8','A','HIS',toolsX],
+            ['Webkit','Safari 2.0','OSX.4+','419.3','A','<input name="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09" id="X" type="checkbox" >',toolsX],
+            ['Presto','Opera 7.0','Win 95+ / OSX.1+','-','A','HIS',toolsX],
+            ['Presto','Opera 7.5','Win 95+ / OSX.2+','-','A','HIS',toolsX],
+            ['Misc','NetFront 3.1','Embedded devices','-','C','HIS',toolsX],
+            ['Misc','NetFront 3.4','Embedded devices','-','A','HIS',toolsX],
+            ['Misc','Dillo 0.8','Embedded devices','-','TEst','<input name="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09" id="X" type="checkbox" >',toolsX],
+            ['Garrett Winters','Edinburgh','Tokyo','8422','<span class="badge badge-info">$320,800</span>','HIS',toolsX]
+        ];
+
+        var dataSet=[<?=$UserObj; ?>];
+
+
+        
+
+                // Table config
+        var table = $('.datatable-generated').DataTable({
+           data: dataSet,
+           responsive: {
+                details: {
+                    type: 'column',
+                    target: -1
+                }
+            },
+            columnDefs: [
+                {
+                    className: 'control',
+                    orderable: false,
+                    targets: -1
+                }
+            ]
+        });
 
 		<?php
 		break;
@@ -80,6 +153,8 @@ switch ($modulo) {
 		# code...
 		break;
 }//END SWITCH
+
+
 ?>
 
 function AjaxProcDB(parametros,base_path,method,mensajeParam,messages)

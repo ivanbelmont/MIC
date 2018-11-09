@@ -209,6 +209,15 @@ switch ($valor) {
 
 
 
+//Funcion para devolver un string que contiene la representación de todos los elementos del array en el mismo orden
+public static function arrayAString($miArray,$sep) {
+	
+    return implode($sep,$miArray);
+}
+////////////////////////////////// END function /////////////////////////////
+
+
+
 }//END CLASS FUNIONES
 
 
@@ -242,14 +251,23 @@ class mic_system
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/notifications/jgrowl.min.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/notifications/noty.min.js"></script>
 
+	<!-- JS SWITCH -->
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/switchery.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/styling/switch.min.js"></script>
+
+
+
     <!-- JS GENERAL -->
 	<script src="<?php echo ASSETS; ?>js/app.js"></script>
 
-	
+
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/datatables_responsive.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/table_elements.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/extra_jgrowl_noty.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/form_checkboxes_radios.js"></script>
 
+	
 				<?php
 				break;
 

@@ -1,11 +1,28 @@
 <?php
 $usuarios=funs_getDatos::obtenerUsuarios();
+
+while ($fila = $usuarios->fetch_object()) 
+          {
+          	$nombre=funs_getDatos::ObtenerCampoBase($fila->datos,'nombre')." ".funs_getDatos::ObtenerCampoBase($fila->datos,'app')." ".funs_getDatos::ObtenerCampoBase($fila->datos,'apm');
+
+          	if($fila->estatus=="off")
+          	{
+          		$checked="";
+          	} else { $checked="checked"; }
+
+          	$Btnswitchery='<input name="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09" id="'.$fila->id_interno.$key.'" type="checkbox" class="form-input-switchery" '.$checked.' data-fouc >';
+          	$UsuariosData[]="['".$nombre."','".$checked."','3','4','5','$Btnswitchery','']";
+
+          }
+          $UserObj= mic_funciones::arrayAString($UsuariosData,',');
+
+          echo $UserObj;
 ?>
 
-		<!-- Control position -->
+<!-- Generated column content -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Control de usuarios</h5>
+						<h5 class="card-title">Generated content for a column</h5>
 						<div class="header-elements">
 							<div class="list-icons">
 		                		<a class="list-icons-item" data-action="collapse"></a>
@@ -16,70 +33,26 @@ $usuarios=funs_getDatos::obtenerUsuarios();
 					</div>
 
 					<div class="card-body">
-						Modulo para administración de los usuarios del sistema y la recopilación de su información.<br><code>Crear</code>, <code>editar</code>, <code>eliminar</code>, <code>habilitar</code> y/o <code>deshabilitar</code>
-
+						In some tables you might wish to have some content generated automatically. This examples shows the use of <code>columns.defaultContent</code> to create a button element in the last column of the table. A simple jQuery <code>click</code> event listener is used to watch for clicks on the row, and when activated uses the <code>row().data()</code> method to get the data for the row and show a bit of information about it in an alert box.
 					</div>
 
-					<table class="table datatable-responsive-control-right">
+					<table class="table datatable-generated ">
 						<thead>
-							<tr>
-								<th>Nombre</th>
-								<th>Tipo</th>
-								<th>Telefono</th>
-								<th>Celular</th>
-								<th>Correo</th>
-								<th>Estado</th>
-								<th class="text-center">Acciones</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php
-
-while ($fila = $usuarios->fetch_object()) 
-          {
-          	$nombre=funs_getDatos::ObtenerCampoBase($fila->datos,'nombre')." ".funs_getDatos::ObtenerCampoBase($fila->datos,'app')." ".funs_getDatos::ObtenerCampoBase($fila->datos,'apm');
-
-          	if($fila->estatus=="off")
-          	{
-          		$checked="";
-          	} else { $checked="checked"; }
-          	$key=mic_funciones::aleatorio(20);
-          	echo '<tr>
-								<td>'.$nombre.'</td>
-								<td><span class="badge '.funs_getDatos::ObtenerRol($fila->id_rol,'color').'">'.funs_getDatos::ObtenerRol($fila->id_rol,'nom').'</span></td>
-								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'tel').'</td>
-								<td>'.funs_getDatos::ObtenerCampoBase($fila->datos,'celular').'</td>
-								<td>'.$fila->usuario.'</td>
-								<td><!-- <span class="badge badge-success">'.$fila->estatus.'</span> -->
-								<input name="V1ROS2JGbFlTakZqTTFab1kyMXNkZz09" id="'.$fila->id_interno.$key.'" type="checkbox" class="form-input-switchery" '.$checked.' data-fouc >
-								</td>
-								<td class="text-center">
-									<div class="list-icons">
-										<div class="dropdown">
-											<a href="#" class="list-icons-item" data-toggle="dropdown">
-												<i class="icon-menu9"></i>
-											</a>
-
-											<div class="dropdown-menu dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="icon-file-pdf"></i> Export to .pdf</a>
-												<a href="#" class="dropdown-item"><i class="icon-file-excel"></i> Export to .csv</a>
-												<a href="#" class="dropdown-item"><i class="icon-file-word"></i> Export to .doc</a>
-											</div>
-										</div>
-									</div>
-								</td>
-								<td></td>
-							</tr>';
-
-          }
-
-
-          	?>
-						</tbody>
+				            <tr>
+				                <th>Name</th>
+				                <th>Position</th>
+				                <th>Office</th>
+				                <th>Extn.</th>
+				                <th>Start date</th>
+				                <th>Salary</th>
+				                <th></th>
+				            </tr>
+				        </thead>
 					</table>
 				</div>
-				<!-- /control position -->
+				<!-- /generated column content -->
+
+
 					            <!-- Options modal -->
 				<div id="options_modal" class="modal fade" role="dialog">
 					<div class="modal-dialog">
