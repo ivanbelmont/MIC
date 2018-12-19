@@ -14,6 +14,7 @@
 	<link href="<?php echo ASSETS; ?>css/layout.min.css" rel="stylesheet" type="text/css">
 	<link href="<?php echo ASSETS; ?>css/components.min.css" rel="stylesheet" type="text/css">
 	<link href="<?php echo ASSETS; ?>css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo ASSETS; ?>css/mic.css" rel="stylesheet" type="text/css">
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->

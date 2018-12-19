@@ -74,6 +74,7 @@ if(isset($_SESSION["id_int"])){
 <?php
 include ("modules/footer.php");
 include ("functions/functionsJS.php");
-?>	
+?>
+<div id="modalBack"  class=""></div>
 </body>
 </html>

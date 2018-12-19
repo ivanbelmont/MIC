@@ -211,7 +211,7 @@ switch ($valor) {
 
 //Funcion para devolver un string que contiene la representación de todos los elementos del array en el mismo orden
 public static function arrayAString($miArray,$sep) {
-	
+
     return implode($sep,$miArray);
 }
 ////////////////////////////////// END function /////////////////////////////
@@ -233,6 +233,7 @@ class mic_system
 	<!-- JS TABLES -->
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/datatables.min.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/notifications/bootbox.min.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/forms/selects/select2.min.js"></script>
 
 	<!-- JS BUTTONS -->
@@ -263,9 +264,22 @@ class mic_system
 
 
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/datatables_responsive.js"></script>
-	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/table_elements.js"></script>
+
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/extra_jgrowl_noty.js"></script>
 	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/form_checkboxes_radios.js"></script>
+
+	<!-- ANIMATE -->
+	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/hot-sneaks/jquery-ui.css" />
+
+
+		<!-- Core JS files -->
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/main/bootstrap.bundle.min.js"></script>
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/plugins/loaders/blockui.min.js"></script>
+
+
+		<!-- TOOLTIP JS -->
+	<script src="<?php echo ASSETS_GLOBAL; ?>js/demo_pages/components_popups.js"></script>
 
 	
 				<?php
@@ -387,6 +401,35 @@ class ActualizaDatos
 
      }
 
+    public static function UpdateUser($id_int,$val,$user,$pass,$rol)
+     {
+     	//COMPROBAR SI YA ESXISTE
+     	//COMPROBAR PAQUETE O PLAN
+
+		$mysqli = funs_DBclass::getConexion();
+		if($pass==""){
+			$contra="";
+		} else { $contra=",contrasena='".mic_funciones::encriptar($pass)."'"; }
+		
+		$array_datos=$val;
+
+		$datos=mic_funciones::serialzar($array_datos);
+		$datos=mic_funciones::encriptar($datos);
+
+
+		$query="UPDATE mic_users SET datos='$datos',usuario='$user',id_rol=$rol".$contra."
+		 WHERE id_interno='".$id_int."'";//CUIDAR EL 
+		$mysqli->query($query) or die (mysqli_error($mysqli)."<br>".$query); 
+
+		//echo $query;
+		$result=mysqli_affected_rows($mysqli);
+		echo $result;
+		return $result;
+//COMPROBAR SI FUE EXITOSA
+
+     }
+
+
 public static function AcessosCliente($id,$id_user,$id_rol)
      {
 		$mysqli = funs_DBclass::getConexion();
@@ -418,7 +461,7 @@ public static function AcessosCliente($id,$id_user,$id_rol)
 
 
 
-      public static function EliminaUsuario($id)
+      public static function DeleteUser($id)
      {
      //ANTES DE ACTUALIZAR, VER SI SE TIENE LOS PERMISOS DE SUPER ADMIN
      	//UN SUPER ADMIN, NO SE PUEDE PONER EN SUSPENCION 
@@ -430,9 +473,9 @@ public static function AcessosCliente($id,$id_user,$id_rol)
 		$mysqli->query($query) or die (mysqli_error($mysqli)."<br>".$query); 
 
 		$afectadas=mysqli_affected_rows($mysqli);
-		echo $query;
+		//echo $query;
 
-		echo "<br>afectadas=".$afectadas;
+		//echo "<br>afectadas=".$afectadas;
 
 		return mysqli_affected_rows($mysqli);
 //COMPROBAR SI FUE EXITOSA
@@ -533,27 +576,39 @@ public static function AcessosCliente($id,$id_user,$id_rol)
 {
 
 
-     public static function InsertaUsuarios($val,$user,$pass)
+     public static function InsertaUsuarios($val,$user,$pass,$rol)
      {
      	//COMPROBAR SI YA ESXISTE
      	//COMPROBAR PAQUETE O PLAN
 
 		$mysqli = funs_DBclass::getConexion();
 		$id_interno=mic_funciones::aleatorio(5);
+
 		$contrasena=mic_funciones::encriptar($pass);
+
+		if($pass=="")
+		{ $contrasena=mic_funciones::encriptar($id_interno);
+		} else 
+		{ $contrasena=mic_funciones::encriptar($pass);
+		}
+
+
+
 		$array_datos=$val;
 
 		$datos=mic_funciones::serialzar($array_datos);
 		$datos=mic_funciones::encriptar($datos);
 
 		$query="INSERT INTO mic_users (id_interno,usuario,contrasena,datos,id_rol,id_status) VALUES 
-		('$id_interno','$user','$contrasena','$datos',0,1) ";
-		$mysqli->query($query) or die (mysqli_error($mysqli)."<br>".$query); 
+		('$id_interno','$user','$contrasena','$datos',$rol,1) ";
+		//$mysqli->query($query) or die (mysqli_error($mysqli)."<br>".$query);
+		$mysqli->query($query) or die (mysqli_error($mysqli).mysqli_errno($mysqli)); 
+		//$mysqli->query($query) or die (mysqli_error($mysqli).mysqli_errno($mysqli));
 
-		echo $query;
-
-		return mysqli_affected_rows($mysqli);
-//COMPROBAR SI FUE EXITOSA
+		//echo $query;
+		//$result=mysqli_affected_rows($mysqli);
+		return $result;
+        //COMPROBAR SI FUE EXITOSA
 
      }
 
@@ -898,14 +953,25 @@ ORDER BY p.`permiso_id`") or die (mysqli_error($mysqli));
      }
      ////////////// END FUNCTION //////////////////////
 
-     public static function ObtenerRol($id_rol,$complement=false)
+     public static function ObtenerRol($id_rol,$complement=false,$todos=false,$escluye=false)
      {
 		 $mysqli = funs_DBclass::getConexion();
-     	
-		$result =$mysqli->query("SELECT descripcion,color FROM mic_rols WHERE id=".$id_rol) or die (mysqli_error($mysqli));
+		  $cons=' WHERE id='.$id_rol;
+		  $not="";
+		 if($id_rol=='x'){
+		 	 $cons="";
+		 	 $not='  WHERE id NOT IN ('.$escluye.') ';//ROLES QUE NO QUEREMOS MOSTRAR
+		 }
+		$sql="SELECT id,descripcion,color,font FROM mic_rols ".$cons.$not;
+		//echo "<br>".$sql."<br>";
+		$result =$mysqli->query($sql)
+		 or die (mysqli_error($mysqli));
 		$result->data_seek(0);
-        $fila = $result->fetch_object();
 
+		if($todos){
+			return $result;
+		}
+        $fila = $result->fetch_object();
         switch ($complement) {
         	case 'nom':
         		$result=$fila->descripcion;
@@ -918,9 +984,6 @@ ORDER BY p.`permiso_id`") or die (mysqli_error($mysqli));
         	$result=$fila->descripcion;
         		break;
         }
-        
-
-
 
 
 			return $result;

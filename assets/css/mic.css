@@ -1,0 +1,40 @@
+div.selection:hover,
+div.selection:active {
+background-color: #324148;
+color: #fff;
+border-radius: .1875rem;
+cursor: pointer;
+}
+
+i.selection:hover,
+i.selection:active {
+color: #f44336;
+cursor: pointer;
+}
+
+div.selectionG:hover,
+div.selectionG:active {
+background-color: #324148;
+color: #fff;
+border-radius: .1875rem;
+cursor: url(http://localhost/MicGit/assets/images/icons/Pencil.cur), se-resize;
+}
+
+i.selectionG:hover,
+i.selectionG:active {
+color: #4caf50;
+cursor: pointer;
+}
+
+
+.iconColorRed{
+color: #324148;
+}
+
+
+#modalBack{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
